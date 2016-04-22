@@ -1,0 +1,33 @@
+ -  title:  "Cat Chat"
+    categories: ionic angularjs
+    description: An example Ionic app built to show an example of hooking up to the camera, and working with external apis.
+    role: Developer
+    url: https://github.com/pattyok/chat-app
+
+ - title:  "MyNeighbor App"
+   categories: angularjs, ionic
+   description: Worked with a small team to build out the MyNeighbor Mobile App, using Ionic and AngularJs. Was responsible for implementing the look and feel and designing and building new features.
+   role: Developer, UX Design
+   url: https://myneighbor.com
+   thumb: IMG_1132.png
+
+ - title:  "PCC Farmland Trust"
+   categories: wordpress
+   description: Built out Wordpress theme and site functionality as designed by Beans N Rice. Site features a donate form with paypal integration, built with Gravity Forms.
+   role: Developer
+   url: https://pccfarmlandtrust.org
+   thumb: pccfarmland.png
+
+ - title:  "North Olympic Land Trust"
+   categories: wordpress, gravity forms
+   description: Built out Wordpress theme and site functionality as designed by Beans N Rice.
+   role: Developer
+   url: https://northolympiclandtrust.org
+   thumb: nolt.png
+
+ - title:  "Modernist Cat"
+   categories: angularjs, paypal integration
+   description:
+   role: Developer
+   url: http://modernistcat.com
+   thumb: modernistcat.png
