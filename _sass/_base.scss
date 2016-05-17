@@ -37,6 +37,9 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+h2, h2, h3, h4, h5, h6, .site-title {
+    font-family: $heading-font-family;
+}
 
 
 /**
@@ -95,12 +98,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $brand-color;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: darken($brand-color, 5%);
     }
 }
 
@@ -204,3 +206,5 @@ pre {
         }
     }
 }
+
+

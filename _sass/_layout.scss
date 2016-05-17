@@ -2,12 +2,13 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    border-top: 5px solid $blue;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+    background:url('../images/shl.png') repeat;
 }
 
 .site-title {
@@ -15,25 +16,33 @@
     font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
-    margin-bottom: 0;
+    margin-bottom: -18px;
+    margin-top: 10px;
+    padding: 10px 20px;
     float: left;
-
+    background:url('../images/45degreee_fabric.jpg') repeat;
+    color: $white;
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $white;
     }
+    @include has-inset-border($white);
 }
 
 .site-nav {
     float: right;
     line-height: 56px;
-
+    .trigger {
+        padding: 10px 20px;
+        margin-bottom: -20px;
+    }
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        color: $blue;
+        font-weight: bold;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one

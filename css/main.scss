@@ -6,17 +6,29 @@
 
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Lato", Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$heading-font-family: 'Arvo', serif;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+//COLORS
+$green: rgb(123, 130, 79);
+$green-dark: rgb(17, 25, 2);
+$green-light: rgb(192, 207, 181);
+$green-lightest: lighten($green-light, 20%);
+$blue: rgb(1, 70, 103);
+$blue-light: rgb(61, 113, 119);
+
+$black: $green-dark;
+$white: $green-lightest;
+
+$text-color:       $black;
+$background-color: $green-lightest;
+$brand-color:      $blue;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -43,6 +55,28 @@ $on-laptop:        800px;
     }
 }
 
+
+@mixin has-inset-border($color) {
+    position: relative;
+    &:after {
+      position:absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        content:" ";
+   
+        //height: 100%; /*Set pixel height and width if not defined in parent element*/
+        //width: 100%;
+
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -ms-box-sizing:border-box;
+        box-sizing:border-box;
+
+        border:1px dashed $color; /*set your border style*/
+    }
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
