@@ -11,17 +11,19 @@ $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
-$heading-font-family: 'Arvo', serif;
+//$heading-font-family: 'Arvo', serif;
+$heading-font-family: 'Syncopate', sans-serif;
+$heading-font-weight: 700;
 
 $spacing-unit:     30px;
 
 //COLORS
-$green: rgb(123, 130, 79);
+$green: #7CB82F;
 $green-dark: rgb(17, 25, 2);
 $green-light: rgb(192, 207, 181);
 $green-lightest: lighten($green-light, 20%);
-$blue: rgb(1, 70, 103);
-$blue-light: rgb(61, 113, 119);
+$blue: #00AEB3;
+$blue-light: lighten($blue, 20%);
 
 $black: $green-dark;
 $white: $green-lightest;
@@ -35,10 +37,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    1100px;
 
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        1100px;
 
 
 

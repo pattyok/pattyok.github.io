@@ -8,7 +8,12 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /**
  * Basic styling
@@ -37,8 +42,12 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-h2, h2, h3, h4, h5, h6, .site-title {
+h1, h2, h3, h4, h5, h6, .site-title {
     font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+ &.white {
+    color: $white;
+ }
 }
 
 

@@ -2,31 +2,24 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $blue;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 2px dotted $grey-color;
+    border-bottom: 4px solid $grey-color;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
-    background:url('../images/shl.png') repeat;
+    background-color: $blue;
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
+    font-size: 36px;
     line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: -18px;
     margin-top: 10px;
-    padding: 10px 20px;
     float: left;
-    background:url('../images/45degreee_fabric.jpg') repeat;
     color: $white;
-    &,
     &:visited {
         color: $white;
     }
-    @include has-inset-border($white);
 }
 
 .site-nav {
@@ -41,7 +34,7 @@
     }
 
     .page-link {
-        color: $blue;
+        color: $white;
         font-weight: bold;
         line-height: $base-line-height;
 
@@ -252,12 +245,63 @@
 /**
  * Projects
  */
-  .project {
-    clear: both;
+.project {
+  float: left;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1.5%;
+  .project-thumb {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-right: 10px;
   }
- .project-thumb {
-   float: left;
-   width: 300px;
-   height: auto;
-   margin-right: 10px;
- }
+  .project-overlay {
+    position: absolute;
+    left: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: rgba( $grey-color, .9 );
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+      padding: 10px;
+    }
+  }
+  &:hover {
+    .project-overlay {
+      left: 0;
+    }
+  }
+  .categories {
+    span {
+      padding: 3px;
+      margin: 3px;
+      background-color: $green;
+      border-radius: 8px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+  .description {
+    display: none;
+  }
+  .footer {
+    background-color: $grey-color-dark;
+    border-top: 1px solid $white;
+    padding: 10px;
+    a {
+      margin: 0px 12px;
+    }
+  }
+}
+

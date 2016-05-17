@@ -9,21 +9,44 @@ layout: default
   <ul class="post-list">
     {% for project in site.data.projects %}
       <li class="project">
+      <div class="project-overlay">
+          <h3 class="white">
+            {{ project.title }}
+          </h3>
+          <div class="categories">
+            {% for cat in project.categories %}
+            <span>{{cat}}</span>
+            {% endfor %}
+          </div>
+          <div class="footer">
+            <a href={{project.url}}><i class="fa fa-lg fa fa-link"></i> Visit</a>
+            <button class="btn btn-link" data-toggle="modal" data-target="#projectModal" data-content="{{project.id}}"><i class="fa fa-lg fa-info-circle"></i> Details</a>
+          </div>
+        </div>
         {% if project.thumb %}
         <img src="{{ project.thumb | prepend: '/images/' }}" class="project-thumb" />
         {% endif %}
-        <h2>
-          <a class="post-link" href="{{ project.url }}">{{ project.title }}</a>
-        </h2>
-        <div class="categories">
-        {% for cat in project.categories %}
-        <span>{{cat}}</span>
-        {% endfor %}
-      </div>
-        <p>{{project.description}}</p>
       </li>
     {% endfor %}
   </ul>
 
 
+</div>
+
+<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    {% for project in site.data.projects %}
+    <div class="modal-content" id="modal-{{project.id}}">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3>{{project.title}}
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <p class="description">{{project.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
