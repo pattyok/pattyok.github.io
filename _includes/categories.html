@@ -1,0 +1,7 @@
+<ul>
+{% for cat in page.categories %}
+<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
+  {{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
+</a></li>
+{% endfor %}
+</ul>

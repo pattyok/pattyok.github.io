@@ -8,19 +8,39 @@ layout: default
 
   <ul class="post-list">
     {% for project in site.data.projects %}
-      <li class="project">
-        {% if project.thumb %}
-        <img src="{{ project.thumb | prepend: '/images/' }}" class="project-thumb" />
-        {% endif %}
-        <h2>
-          <a class="post-link" href="{{ project.url }}">{{ project.title }}</a>
-        </h2>
-        <div class="categories">
-        {% for cat in project.categories %}
-        <span>{{cat}}</span>
-        {% endfor %}
-      </div>
-        <p>{{project.description}}</p>
+      <li class="project" id="{{ project.id | prepend: 'scrollId-' }}">
+        <div class="row">
+          {% if project.thumb %}
+          <div class="col-sm-4">
+            <img src="{{ project.thumb | prepend: '/images/' }}" class="project-thumb" />
+          </div>
+          {% endif %}
+          <div class="col-sm-8">
+            <h2>
+              {{ project.title }}</a>
+            </h2>
+            <div class="categories">
+              {% for cat in project.categories %}
+              <span>{{cat}}</span>
+              {% endfor %}
+            </div>
+            <p>{{project.description}}</p>
+
+            <button type="button" class="btn btn-primary" id="{{ project.id | prepend: 'toggle-' }}" data-toggle="collapse" data-id="{{project.id}}" data-target="{{ project.id | prepend: '#showSlides-' }}">View Details <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+            <a class="project-link" href="{{ project.url }}">Visit Site &rarr;</a>
+          </div>
+        </div>
+        <div class="row collapse slide-gallery" data-id="{{project.id}}" id="{{ project.id | prepend: 'showSlides-' }}">
+          <div class="flexslider">
+            <ul class="slides">
+              {% for slide in project.slides %}
+                <li>
+                  <img src="{{ slide | prepend: '/images/' }}" />
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
       </li>
     {% endfor %}
   </ul>

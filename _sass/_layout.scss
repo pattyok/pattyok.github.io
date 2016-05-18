@@ -243,12 +243,18 @@
 /**
  * Projects
  */
-  .project {
-    clear: both;
+.project {
+  .project-link {
+    float: right;
   }
- .project-thumb {
-   float: left;
-   width: 300px;
-   height: auto;
-   margin-right: 10px;
- }
+  .slide-gallery {
+    background-color: #c2c2c2;
+    margin-top:20px;
+    border-top: 8px solid #636363;
+    border-bottom: 8px solid #636363;
+  }
+  .flexslider {
+    background-color: transparent;
+    border: none;
+  }
+}
